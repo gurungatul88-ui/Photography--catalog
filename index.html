@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LensCraft | Photographer Portfolio</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f0f0f;
+      color:#fff;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      width:100%;
+      display:block;
+      border-radius:10px;
+    }
+
+    /* Navbar */
+    header{
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      left:0;
+      background:rgba(0,0,0,0.7);
+      backdrop-filter:blur(10px);
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:1.5rem;
+      font-weight:bold;
+      letter-spacing:2px;
+    }
+
+    nav a{
+      margin-left:25px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#cfcfcf;
+    }
+
+    /* Hero */
+    .hero{
+      height:100vh;
+      background:url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+      position:relative;
+    }
+
+    .hero::after{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.5);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:700px;
+    }
+
+    .hero h1{
+      font-size:4rem;
+      margin-bottom:15px;
+    }
+
+    .hero p{
+      font-size:1.1rem;
+      color:#ddd;
+      margin-bottom:25px;
+    }
+
+    .btn{
+      padding:12px 28px;
+      border:1px solid #fff;
+      border-radius:30px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#fff;
+      color:#000;
+    }
+
+    /* Gallery */
+    section{
+      padding:90px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+      font-size:2rem;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .gallery img{
+      height:320px;
+      object-fit:cover;
+      transition:0.4s;
+    }
+
+    .gallery img:hover{
+      transform:scale(1.03);
+    }
+
+    /* About */
+    .about{
+      max-width:800px;
+      margin:auto;
+      text-align:center;
+      color:#ccc;
+    }
+
+    .about h2{
+      margin-bottom:20px;
+      color:#fff;
+    }
+
+    /* Contact */
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin-bottom:15px;
+      color:#ccc;
+    }
+
+    footer{
+      text-align:center;
+      padding:25px;
+      border-top:1px solid #222;
+      color:#888;
+    }
+
+    @media(max-width:768px){
+      .hero h1{
+        font-size:2.5rem;
+      }
+
+      nav{
+        display:none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">LensCraft</div>
+
+    <nav>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Capturing Timeless Moments</h1>
+      <p>
+        Minimal photography portfolio for showcasing creative work,
+        portraits, travel, and lifestyle photography.
+      </p>
+
+      <a href="#gallery" class="btn">View Portfolio</a>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2 class="section-title">Portfolio</h2>
+
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1000&auto=format&fit=crop" alt="">
+      
+      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop" alt="">
+      
+      <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000&auto=format&fit=crop" alt="">
+      
+      <img src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?q=80&w=1000&auto=format&fit=crop" alt="">
+      
+      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1000&auto=format&fit=crop" alt="">
+      
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1000&auto=format&fit=crop" alt="">
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="about">
+      <h2>About Me</h2>
+
+      <p>
+        I’m a professional photographer focused on storytelling through
+        natural light, emotion, and composition. My work blends modern
+        minimalism with authentic moments to create timeless visuals.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="contact">
+      <h2 class="section-title">Get In Touch</h2>
+
+      <p>Email: hello@lenscraft.com</p>
+      <p>Instagram: @lenscraft</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 LensCraft Photography. All rights reserved.
+  </footer>
+
+</body>
+</html>
